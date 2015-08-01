@@ -1,10 +1,10 @@
 class DirectorsController < ApplicationController
   def index
-    @list_of_directors = Directors.all
+    @list_of_directors = Director.all
   end
 
   def show
-    @director = Directors.find(params["id"])
+    @director = Director.find(params["id"])
   end
 
   def new_form
@@ -13,7 +13,7 @@ class DirectorsController < ApplicationController
 
     def create_row
 
-    p = Directors.new
+    p = Director.new
     p.name = params["name"]
     p.bio = params["bio"]
     p.dob = params["dob"]
@@ -25,7 +25,7 @@ class DirectorsController < ApplicationController
   end
 
   def destroy
-    @director = Directors.find(params["id"])
+    @director = Director.find(params["id"])
 
     @director.destroy
 
@@ -34,11 +34,11 @@ class DirectorsController < ApplicationController
 
 
    def edit_form
-    @director = Directors.find(params["id"])
+    @director = Director.find(params["id"])
   end
 
    def update_row
-    p = Directors.find(params["id"])
+    p = Director.find(params["id"])
     p.name = params["name"]
     p.bio = params["bio"]
     p.dob = params["dob"]
