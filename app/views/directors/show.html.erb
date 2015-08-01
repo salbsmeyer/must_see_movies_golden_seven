@@ -1,0 +1,23 @@
+<h1>Director Details</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>DOB</th>
+    <th>Image</th>
+  </tr>
+  <tr>
+  <td>
+      <%= @director.name %>
+  </td>
+  <td>
+      <%= @director.bio %>
+  </td>
+  <td>
+      <%= @director.dob %>
+  </td>
+  <td>
+      <img src="<%= @director.image_url %>" width="80">
+  </td>
+  </tr>
+  </table>
