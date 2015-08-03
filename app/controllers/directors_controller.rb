@@ -11,8 +11,7 @@ class DirectorsController < ApplicationController
 
   end
 
-    def create_row
-
+  def create_row
     p = Director.new
     p.name = params["name"]
     p.bio = params["bio"]
